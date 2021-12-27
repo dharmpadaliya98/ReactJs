@@ -1,5 +1,13 @@
 import './App.css';
 
+const Hello = (props) => {
+  return (
+    <div>
+      <p>Hello {props.name} {props.age}</p>
+    </div>
+  )
+}
+
 function App() {
   console.log('Hello from component')
   const now = new Date()
@@ -7,8 +15,9 @@ function App() {
   const b = 20
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
+        <Hello name="Dp" age='24' />
         <p> Hello New user {now.toString()}</p>
         <p> {a} + {b} is {a + b} </p>
       </header>
