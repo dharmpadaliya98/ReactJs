@@ -3,10 +3,7 @@ import './App.css';
 const Hello = (props) => {
   let z = props.arto
   console.log(z)
-  const bornYear = () => {
-    const yearNow = new Date().getFullYear()
-    return yearNow - props.age
-  }
+  const bornYear = () => new Date().getFullYear() - props.age
   return (
     <div>
       <p> {props.name} {props.age}</p>
@@ -16,7 +13,6 @@ const Hello = (props) => {
 
     </div>
   )
-
 }
 
 
@@ -39,8 +35,6 @@ function App() {
     },
 
   }
-
-
 
 
   return (
